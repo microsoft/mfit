@@ -1,0 +1,29 @@
+From 34e8f8f67c14bf1d2e6783e92bb7ac2537e65de8 Mon Sep 17 00:00:00 2001
+From: Lucian Cojocar <root@localhost>
+Date: Tue, 28 Jul 2020 15:10:42 -0700
+Subject: [PATCH] teensy3-lib: comment out the main file
+
+---
+ teensy3/main.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/teensy3/main.cpp b/teensy3/main.cpp
+index 79bdf05..00a294f 100644
+--- a/teensy3/main.cpp
++++ b/teensy3/main.cpp
+@@ -30,6 +30,7 @@
+ 
+ #include <Arduino.h>
+ 
++#if 0
+ extern "C" int main(void)
+ {
+ #ifdef USING_MAKEFILE
+@@ -56,3 +57,4 @@ extern "C" int main(void)
+ #endif
+ }
+ 
++#endif
+-- 
+2.20.1
+

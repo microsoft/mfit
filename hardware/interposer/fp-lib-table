@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name fi-library)(type KiCad)(uri ${KIPRJMOD}/../fi-library)(options "")(descr ""))
+)

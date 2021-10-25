@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name teensy)(type KiCad)(uri ${KIPRJMOD}/../../fi-library/teensy.pretty-master)(options "")(descr ""))
+  (lib (name txb0104-breakout)(type KiCad)(uri ${KIPRJMOD}/../../fi-library/txb0104-breakout.pretty)(options "")(descr ""))
+  (lib (name power-reg-breakout)(type KiCad)(uri ${KIPRJMOD}/../../fi-library/power-reg-breakout.pretty)(options "")(descr ""))
+)

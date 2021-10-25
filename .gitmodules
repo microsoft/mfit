@@ -1,0 +1,3 @@
+[submodule "firmware/cores"]
+	path = firmware/cores
+	url = https://github.com/PaulStoffregen/cores.git

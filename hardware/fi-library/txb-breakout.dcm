@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TXB-0104-breakout
+D https://www.sparkfun.com/products/11771
+K TXB-0104
+F http://cdn.sparkfun.com/datasheets/BreakoutBoards/TXB0104_breakout.pdf
+$ENDCMP
+#
+#End Doc Library

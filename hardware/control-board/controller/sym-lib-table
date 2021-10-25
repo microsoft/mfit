@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name teensy)(type Legacy)(uri ${KIPRJMOD}/../../fi-library/teensy_library-master/teensy.lib)(options "")(descr ""))
+  (lib (name txb-breakout)(type Legacy)(uri ${KIPRJMOD}/../../fi-library/txb-breakout.lib)(options "")(descr ""))
+  (lib (name power-reg-breakout)(type Legacy)(uri ${KIPRJMOD}/../../fi-library/power-reg-breakout.lib)(options "")(descr ""))
+)

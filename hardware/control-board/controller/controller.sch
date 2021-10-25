@@ -1,0 +1,479 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "mFIT Controller Board"
+Date "2020-12-5"
+Rev "1"
+Comp "@lucojoc"
+Comment1 "mFIT Controller Board based on Teensy 3.6"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L teensy:Teensy3.6 U1
+U 1 1 5FCC123B
+P 5900 3750
+F 0 "U1" H 5900 6293 60  0000 C CNN
+F 1 "Teensy3.6" H 5900 6187 60  0000 C CNN
+F 2 "teensy:Teensy35_36" H 5900 6081 60  0000 C CNN
+F 3 "" H 5900 3800 60  0000 C CNN
+	1    5900 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L txb-breakout:TXB-0104-breakout U2
+U 1 1 5FCCB528
+P 3550 4100
+F 0 "U2" H 3575 3085 50  0000 C CNN
+F 1 "TXB-0104-breakout" H 3575 3176 50  0000 C CNN
+F 2 "txb0104-breakout:TXB0104-breakout" H 3550 4150 50  0001 C CNN
+F 3 "http://cdn.sparkfun.com/datasheets/BreakoutBoards/TXB0104_breakout.pdf" H 3550 4150 50  0001 C CNN
+	1    3550 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power-reg-breakout:power-reg-breakout U3
+U 1 1 5FCD18AB
+P 8200 4900
+F 0 "U3" H 8475 5025 50  0000 C CNN
+F 1 "power-reg-1.8V" H 8475 4934 50  0000 C CNN
+F 2 "power-reg-breakout:breakout-power-reg" H 8200 4900 50  0001 C CNN
+F 3 "" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5FCDCCA2
+P 8300 5100
+F 0 "#PWR04" H 8300 4850 50  0001 C CNN
+F 1 "GND" H 8305 4927 50  0000 C CNN
+F 2 "" H 8300 5100 50  0001 C CNN
+F 3 "" H 8300 5100 50  0001 C CNN
+	1    8300 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FCDD3C6
+P 7550 5100
+F 0 "#PWR03" H 7550 4850 50  0001 C CNN
+F 1 "GND" H 7555 4927 50  0000 C CNN
+F 2 "" H 7550 5100 50  0001 C CNN
+F 3 "" H 7550 5100 50  0001 C CNN
+	1    7550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5FCDDF20
+P 8400 2800
+F 0 "#PWR05" H 8400 2550 50  0001 C CNN
+F 1 "GND" H 8405 2627 50  0000 C CNN
+F 2 "" H 8400 2800 50  0001 C CNN
+F 3 "" H 8400 2800 50  0001 C CNN
+	1    8400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FCDE4F7
+P 3900 3400
+F 0 "#PWR02" H 3900 3150 50  0001 C CNN
+F 1 "GND" H 3905 3227 50  0000 C CNN
+F 2 "" H 3900 3400 50  0001 C CNN
+F 3 "" H 3900 3400 50  0001 C CNN
+	1    3900 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FCDF462
+P 3050 3400
+F 0 "#PWR01" H 3050 3150 50  0001 C CNN
+F 1 "GND" H 3055 3227 50  0000 C CNN
+F 2 "" H 3050 3400 50  0001 C CNN
+F 3 "" H 3050 3400 50  0001 C CNN
+	1    3050 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 3600 4750 3600
+Wire Wire Line
+	3900 3700 4750 3700
+Wire Wire Line
+	3900 3800 4750 3800
+Wire Wire Line
+	3900 3900 4750 3900
+Wire Wire Line
+	4750 3000 4200 3000
+Wire Wire Line
+	4200 3000 4200 3500
+Wire Wire Line
+	4200 3500 3900 3500
+Wire Wire Line
+	8300 5000 8550 5000
+Text Label 8550 5000 0    50   ~ 0
+VccA
+Wire Wire Line
+	3150 3500 2950 3500
+Text Label 2950 3000 0    50   ~ 0
+VccA
+Wire Wire Line
+	3050 3400 3150 3400
+NoConn ~ 3900 4000
+NoConn ~ 3150 4000
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5FCE35B3
+P 8400 2800
+F 0 "TP2" H 8458 2918 50  0000 L CNN
+F 1 "TestPoint" H 8458 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 8600 2800 50  0001 C CNN
+F 3 "~" H 8600 2800 50  0001 C CNN
+	1    8400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FCE3B1C
+P 7850 2800
+F 0 "TP1" H 7908 2918 50  0000 L CNN
+F 1 "TestPoint" H 7908 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 8050 2800 50  0001 C CNN
+F 3 "~" H 8050 2800 50  0001 C CNN
+	1    7850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5FCE3F8B
+P 8950 2800
+F 0 "TP3" H 9008 2918 50  0000 L CNN
+F 1 "TestPoint" H 9008 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9150 2800 50  0001 C CNN
+F 3 "~" H 9150 2800 50  0001 C CNN
+	1    8950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5FCE4201
+P 9550 2800
+F 0 "TP4" H 9608 2918 50  0000 L CNN
+F 1 "TestPoint" H 9608 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9750 2800 50  0001 C CNN
+F 3 "~" H 9750 2800 50  0001 C CNN
+	1    9550 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2800 7850 2900
+Text Label 7850 2900 0    50   ~ 0
+VccA
+Text Label 4200 3000 0    50   ~ 0
+VccB
+Wire Wire Line
+	8950 2800 8950 2950
+Text Label 8950 2950 0    50   ~ 0
+VccB
+Wire Wire Line
+	4750 3400 4500 3400
+Text Label 4500 3400 2    50   ~ 0
+Trig
+Wire Wire Line
+	9550 2800 9550 2950
+Text Label 9550 2950 0    50   ~ 0
+Trig
+$Comp
+L power:GND #PWR07
+U 1 1 5FCE800F
+P 4750 1600
+F 0 "#PWR07" H 4750 1350 50  0001 C CNN
+F 1 "GND" V 4755 1472 50  0000 R CNN
+F 2 "" H 4750 1600 50  0001 C CNN
+F 3 "" H 4750 1600 50  0001 C CNN
+	1    4750 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5FCE88FD
+P 4750 4200
+F 0 "#PWR08" H 4750 3950 50  0001 C CNN
+F 1 "GND" V 4755 4072 50  0000 R CNN
+F 2 "" H 4750 4200 50  0001 C CNN
+F 3 "" H 4750 4200 50  0001 C CNN
+	1    4750 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5FCE925F
+P 4750 5400
+F 0 "#PWR09" H 4750 5150 50  0001 C CNN
+F 1 "GND" V 4755 5272 50  0000 R CNN
+F 2 "" H 4750 5400 50  0001 C CNN
+F 3 "" H 4750 5400 50  0001 C CNN
+	1    4750 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5FCE9960
+P 7050 5200
+F 0 "#PWR010" H 7050 4950 50  0001 C CNN
+F 1 "GND" V 7055 5072 50  0000 R CNN
+F 2 "" H 7050 5200 50  0001 C CNN
+F 3 "" H 7050 5200 50  0001 C CNN
+	1    7050 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5FCEC17A
+P 2250 3400
+F 0 "#PWR06" H 2250 3150 50  0001 C CNN
+F 1 "GND" H 2255 3227 50  0000 C CNN
+F 2 "" H 2250 3400 50  0001 C CNN
+F 3 "" H 2250 3400 50  0001 C CNN
+	1    2250 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7550 5000 7050 5000
+Wire Wire Line
+	2950 3000 2950 3500
+Wire Wire Line
+	2250 3600 3150 3600
+Wire Wire Line
+	2250 3700 3150 3700
+Wire Wire Line
+	2250 3800 3150 3800
+Wire Wire Line
+	2250 3900 3150 3900
+$Comp
+L Connector:Conn_01x06_Female J1
+U 1 1 5FCCBAAA
+P 2050 3600
+F 0 "J1" H 2000 3650 50  0000 C CNN
+F 1 "Conn_01x06_Female" V 2100 3550 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2050 3600 50  0001 C CNN
+F 3 "~" H 2050 3600 50  0001 C CNN
+	1    2050 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3500 2350 3500
+Wire Wire Line
+	2350 3500 2350 3000
+Text Label 2350 3000 2    50   ~ 0
+Trig
+Text Label 4250 3800 0    50   ~ 0
+ALERTN_ENA
+Text Label 2300 3800 0    50   ~ 0
+ALERTN_ENA_CMD
+Text Label 2300 3900 0    50   ~ 0
+INJ0_REF_CMD
+Text Label 4250 3900 0    50   ~ 0
+INJ0_REF
+Text Label 4250 3700 0    50   ~ 0
+SPARE0
+Text Label 4250 3600 0    50   ~ 0
+SPARE1
+Text Label 2300 3600 0    50   ~ 0
+SPARE1_CMD
+Text Label 2300 3700 0    50   ~ 0
+SPARE0_CMD
+$Comp
+L Device:R_Network04_US RN1
+U 1 1 5FCE4FA3
+P 3700 2000
+F 0 "RN1" V 4025 2000 50  0000 C CNN
+F 1 "470" V 3934 2000 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 3975 2000 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 3700 2000 50  0001 C CNN
+	1    3700 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5FCE6BDF
+P 3500 2200
+F 0 "#PWR0101" H 3500 1950 50  0001 C CNN
+F 1 "GND" V 3505 2072 50  0000 R CNN
+F 2 "" H 3500 2200 50  0001 C CNN
+F 3 "" H 3500 2200 50  0001 C CNN
+	1    3500 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FCE8245
+P 4150 1900
+F 0 "D1" H 4300 1950 50  0000 C CNN
+F 1 "LED" H 4000 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 1900 50  0001 C CNN
+F 3 "~" H 4150 1900 50  0001 C CNN
+	1    4150 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1900 4750 1900
+Wire Wire Line
+	4000 1900 3900 1900
+$Comp
+L Device:LED D2
+U 1 1 5FCEA164
+P 4150 2000
+F 0 "D2" H 4300 2050 50  0000 C CNN
+F 1 "LED" H 4000 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 2000 50  0001 C CNN
+F 3 "~" H 4150 2000 50  0001 C CNN
+	1    4150 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5FCEA5CB
+P 4150 2100
+F 0 "D3" H 4300 2150 50  0000 C CNN
+F 1 "LED" H 4000 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 2100 50  0001 C CNN
+F 3 "~" H 4150 2100 50  0001 C CNN
+	1    4150 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5FCEA794
+P 4150 2200
+F 0 "D4" H 4300 2250 50  0000 C CNN
+F 1 "LED" H 4000 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4150 2200 50  0001 C CNN
+F 3 "~" H 4150 2200 50  0001 C CNN
+	1    4150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2200 4750 2200
+Wire Wire Line
+	4300 2100 4750 2100
+Wire Wire Line
+	4300 2000 4750 2000
+Wire Wire Line
+	3900 2000 4000 2000
+Wire Wire Line
+	3900 2100 4000 2100
+Wire Wire Line
+	3900 2200 4000 2200
+$Comp
+L power:GND #PWR0102
+U 1 1 5FCF993B
+P 1300 1200
+F 0 "#PWR0102" H 1300 950 50  0001 C CNN
+F 1 "GND" V 1305 1072 50  0000 R CNN
+F 2 "" H 1300 1200 50  0001 C CNN
+F 3 "" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5FCFA6FB
+P 1400 1200
+F 0 "H1" V 1354 1350 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1445 1350 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1400 1200 50  0001 C CNN
+F 3 "~" H 1400 1200 50  0001 C CNN
+	1    1400 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5FCFAABF
+P 1400 1450
+F 0 "H2" V 1354 1600 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1445 1600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1400 1450 50  0001 C CNN
+F 3 "~" H 1400 1450 50  0001 C CNN
+	1    1400 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5FCFB16F
+P 1400 1700
+F 0 "H3" V 1354 1850 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1445 1850 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1400 1700 50  0001 C CNN
+F 3 "~" H 1400 1700 50  0001 C CNN
+	1    1400 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5FCFB314
+P 1400 1950
+F 0 "H4" V 1354 2100 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1445 2100 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 1400 1950 50  0001 C CNN
+F 3 "~" H 1400 1950 50  0001 C CNN
+	1    1400 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5FCFC7BC
+P 1300 1450
+F 0 "#PWR0103" H 1300 1200 50  0001 C CNN
+F 1 "GND" V 1305 1322 50  0000 R CNN
+F 2 "" H 1300 1450 50  0001 C CNN
+F 3 "" H 1300 1450 50  0001 C CNN
+	1    1300 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5FCFD3E4
+P 1300 1700
+F 0 "#PWR0104" H 1300 1450 50  0001 C CNN
+F 1 "GND" V 1305 1572 50  0000 R CNN
+F 2 "" H 1300 1700 50  0001 C CNN
+F 3 "" H 1300 1700 50  0001 C CNN
+	1    1300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5FCFD6BF
+P 1300 1950
+F 0 "#PWR0105" H 1300 1700 50  0001 C CNN
+F 1 "GND" V 1305 1822 50  0000 R CNN
+F 2 "" H 1300 1950 50  0001 C CNN
+F 3 "" H 1300 1950 50  0001 C CNN
+	1    1300 1950
+	0    1    1    0   
+$EndComp
+Text Label 7250 5000 0    50   ~ 0
+Vusb
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5FD3BE5F
+P 10100 2800
+F 0 "TP5" H 10158 2918 50  0000 L CNN
+F 1 "TestPoint" H 10158 2827 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 10300 2800 50  0001 C CNN
+F 3 "~" H 10300 2800 50  0001 C CNN
+	1    10100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 2800 10100 2950
+Text Label 10100 2950 0    50   ~ 0
+Vusb
+$EndSCHEMATC

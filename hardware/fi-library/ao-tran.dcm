@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AO3400
+D n Channel MOSFET, enhanced
+F http://www.aosmd.com/pdfs/datasheet/ao3400.pdf
+$ENDCMP
+#
+#End Doc Library
